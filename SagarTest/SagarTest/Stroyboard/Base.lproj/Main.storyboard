@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i34-yW-JBp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6E1-GR-4BC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i34-yW-JBp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="YFz-nw-bjR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tUc-zx-ZhD" kind="relationship" relationship="rootViewController" id="3eK-t0-qhR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pRH-no-gAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="-649.55357142857144"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="TXg-kg-cge">
+            <objects>
+                <viewController id="tUc-zx-ZhD" customClass="WeatherViewController" customModule="SagarTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="izo-H2-ccV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pXo-6w-nJ6">
+                                <rect key="frame" x="0.0" y="184" width="414" height="678"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="cOw-j6-nCW">
+                                <rect key="frame" x="0.0" y="140" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Bt6-ta-QPe"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh6-0S-4DP">
+                                <rect key="frame" x="207" y="367" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-YL-Rso">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cOw-j6-nCW" firstAttribute="leading" secondItem="qJn-GZ-Gdg" secondAttribute="leading" id="4cW-tq-zTB"/>
+                            <constraint firstItem="mh6-0S-4DP" firstAttribute="centerY" secondItem="izo-H2-ccV" secondAttribute="centerY" constant="-81" id="DIa-bl-ULy"/>
+                            <constraint firstItem="pXo-6w-nJ6" firstAttribute="top" secondItem="cOw-j6-nCW" secondAttribute="bottom" id="G79-uW-msf"/>
+                            <constraint firstItem="mh6-0S-4DP" firstAttribute="centerX" secondItem="izo-H2-ccV" secondAttribute="centerX" id="H9r-uL-RMn"/>
+                            <constraint firstItem="qJn-GZ-Gdg" firstAttribute="trailing" secondItem="pXo-6w-nJ6" secondAttribute="trailing" id="Kdh-ST-B6i"/>
+                            <constraint firstItem="5Ed-YL-Rso" firstAttribute="centerY" secondItem="izo-H2-ccV" secondAttribute="centerY" id="bX0-B5-UB1"/>
+                            <constraint firstItem="cOw-j6-nCW" firstAttribute="top" secondItem="qJn-GZ-Gdg" secondAttribute="top" id="cll-mc-OFe"/>
+                            <constraint firstItem="pXo-6w-nJ6" firstAttribute="leading" secondItem="qJn-GZ-Gdg" secondAttribute="leading" id="k9n-j8-5OB"/>
+                            <constraint firstItem="5Ed-YL-Rso" firstAttribute="centerX" secondItem="izo-H2-ccV" secondAttribute="centerX" id="ncA-co-pRi"/>
+                            <constraint firstAttribute="trailing" secondItem="cOw-j6-nCW" secondAttribute="trailing" id="x9S-wV-aBx"/>
+                            <constraint firstItem="qJn-GZ-Gdg" firstAttribute="bottom" secondItem="pXo-6w-nJ6" secondAttribute="bottom" id="xaA-NR-B3D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qJn-GZ-Gdg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weather" id="hsh-e5-sJJ"/>
+                    <connections>
+                        <outlet property="lblTemp" destination="mh6-0S-4DP" id="6hC-MW-lfi"/>
+                        <outlet property="lblhumidity" destination="5Ed-YL-Rso" id="pXk-gt-Tnv"/>
+                        <outlet property="searchBar" destination="cOw-j6-nCW" id="pOl-pP-ENE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TbZ-RD-yJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095.6521739130435" y="-649.55357142857144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="564" height="1002"/>
+    </resources>
+</document>
